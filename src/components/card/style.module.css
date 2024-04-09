@@ -1,0 +1,63 @@
+/* BackgroundImageDiv.module.css */
+.backgroundContainer {
+    position: relative;
+    /* Defina o tamanho conforme necessário */
+    /* altura exemplo, ajuste como necessário */
+    overflow: hidden;
+    flex: 1 350px;
+    border-radius: 8px;
+    height: 100%;
+}
+
+
+.backgroundImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Opacidade da imagem de fundo */
+    opacity: 0.5;
+    transition: .4s all;
+    /* ajuste para o nível de opacidade desejado */
+}
+
+.backgroundContainer:hover .backgroundImage{
+    transform: scale(1.2);
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Cor de sobreposição semi-transparente */
+}
+
+.content {
+    position: relative;
+    /* Isso garante que o texto fique acima da sobreposição */
+    /* Estilização adicional para o conteúdo aqui */
+    z-index: 10;
+    /* Garante que o conteúdo esteja acima da imagem e da sobreposição */
+    padding: 1rem;
+    color: #fff;
+    height: 100%;
+}
+
+.content h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    height:  10%;
+}
+
+.content .description {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    font-size: 1.2rem;
+}
